@@ -379,8 +379,8 @@ class OrderController extends Controller
                 );
 
                 if($createdOrder->wallet_amount_used > 0){
-                    $payment->price = $createdOrder->wallet_amount_used;
-                    $payment->status = 'Paid';
+                    // $payment->price = $createdOrder->wallet_amount_used;
+                    // $payment->status = 'Paid';
                     $payment->description = "Payment Wallet Created";
                     $payment->save();
                 }
@@ -636,8 +636,9 @@ class OrderController extends Controller
                     );
 
                     if($createdOrder->wallet_amount_used > 0){
-                        $payment->price = $createdOrder->wallet_amount_used;
-                        $payment->status = 'Paid';
+                        // $payment->price = $createdOrder->wallet_amount_used;
+                        // $payment->status = 'Paid';
+                        $payment->description = 'Payment wallet Created';
                         $payment->save();
                     }
 
